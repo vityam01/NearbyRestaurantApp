@@ -24,8 +24,7 @@ class DetailViewControllerModel {
     
     
     func imageURL() -> String {
-        print(place.categories?.first?.id)
-        let url = "https://api.foursquare.com/v2/photos/original/\(String(describing: place.categories?.first?.id))"
+        let url = "\(place.categories?.first?.icon?.prefix ?? "")120\(place.categories?.first?.icon?.suffix ?? "")"
         return url
     }
 }
